@@ -5,7 +5,11 @@
         <attribute name="gender" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="PersonImage" representedClassName="PersonImage" syncable="YES">
+        <attribute name="img" optional="YES" attributeType="Binary"/>
+    </entity>
     <elements>
         <element name="Person" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="PersonImage" positionX="-54" positionY="18" width="128" height="58"/>
     </elements>
 </model>

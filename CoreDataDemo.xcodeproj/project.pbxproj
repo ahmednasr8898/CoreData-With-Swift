@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		796DDE32256B088200ED7963 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DDE31256B088200ED7963 /* PhotoViewController.swift */; };
+		796DDE36256B093100ED7963 /* PersonImage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DDE34256B093100ED7963 /* PersonImage+CoreDataClass.swift */; };
+		796DDE37256B093100ED7963 /* PersonImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DDE35256B093100ED7963 /* PersonImage+CoreDataProperties.swift */; };
 		7995C27B2565612400A92A1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7995C27A2565612400A92A1E /* AppDelegate.swift */; };
 		7995C27D2565612400A92A1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7995C27C2565612400A92A1E /* SceneDelegate.swift */; };
 		7995C27F2565612400A92A1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7995C27E2565612400A92A1E /* ViewController.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		796DDE31256B088200ED7963 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		796DDE34256B093100ED7963 /* PersonImage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonImage+CoreDataClass.swift"; sourceTree = "<group>"; };
+		796DDE35256B093100ED7963 /* PersonImage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7995C2772565612400A92A1E /* CoreDataDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7995C27A2565612400A92A1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7995C27C2565612400A92A1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		796DDE3A256B094300ED7963 /* PersonImageModel */ = {
+			isa = PBXGroup;
+			children = (
+				796DDE35256B093100ED7963 /* PersonImage+CoreDataProperties.swift */,
+				796DDE34256B093100ED7963 /* PersonImage+CoreDataClass.swift */,
+			);
+			path = PersonImageModel;
+			sourceTree = "<group>";
+		};
 		7995C26E2565612400A92A1E = {
 			isa = PBXGroup;
 			children = (
@@ -62,10 +77,12 @@
 		7995C2792565612400A92A1E /* CoreDataDemo */ = {
 			isa = PBXGroup;
 			children = (
-				7995C297256563A400A92A1E /* Model */,
+				796DDE3A256B094300ED7963 /* PersonImageModel */,
+				7995C297256563A400A92A1E /* PersonModel */,
 				7995C27A2565612400A92A1E /* AppDelegate.swift */,
 				7995C27C2565612400A92A1E /* SceneDelegate.swift */,
 				7995C27E2565612400A92A1E /* ViewController.swift */,
+				796DDE31256B088200ED7963 /* PhotoViewController.swift */,
 				7995C2802565612400A92A1E /* Main.storyboard */,
 				7995C2862565612600A92A1E /* Assets.xcassets */,
 				7995C2882565612600A92A1E /* LaunchScreen.storyboard */,
@@ -75,13 +92,13 @@
 			path = CoreDataDemo;
 			sourceTree = "<group>";
 		};
-		7995C297256563A400A92A1E /* Model */ = {
+		7995C297256563A400A92A1E /* PersonModel */ = {
 			isa = PBXGroup;
 			children = (
 				7995C2922565639900A92A1E /* Person+CoreDataClass.swift */,
 				7995C2932565639900A92A1E /* Person+CoreDataProperties.swift */,
 			);
-			path = Model;
+			path = PersonModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,10 +171,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				796DDE36256B093100ED7963 /* PersonImage+CoreDataClass.swift in Sources */,
+				796DDE37256B093100ED7963 /* PersonImage+CoreDataProperties.swift in Sources */,
 				7995C27F2565612400A92A1E /* ViewController.swift in Sources */,
 				7995C2852565612400A92A1E /* CoreDataDemo.xcdatamodeld in Sources */,
 				7995C2952565639900A92A1E /* Person+CoreDataProperties.swift in Sources */,
 				7995C2942565639900A92A1E /* Person+CoreDataClass.swift in Sources */,
+				796DDE32256B088200ED7963 /* PhotoViewController.swift in Sources */,
 				7995C27B2565612400A92A1E /* AppDelegate.swift in Sources */,
 				7995C27D2565612400A92A1E /* SceneDelegate.swift in Sources */,
 			);

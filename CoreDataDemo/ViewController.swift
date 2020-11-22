@@ -71,7 +71,6 @@ class ViewController: UIViewController {
         }catch{
             print("Error in deleteAllDataOnClick function: ", error.localizedDescription)
         }
-        
         do{
             //3- save change
             try self.context.save()
@@ -80,6 +79,11 @@ class ViewController: UIViewController {
         }
         //4- realod data in tableView
         self.fetchData()
+    }
+    //for upload and retrive image from database
+    @IBAction func goToPhotosPageOnClick(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PhotoViewController")
+        navigationController?.pushViewController(storyboard, animated: true)
     }
 }
 //tableView with dataSource

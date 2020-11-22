@@ -62,11 +62,18 @@
                                 <action selector="deleteAllDataOnClick:" destination="BYZ-38-t0r" id="mmX-nX-3EJ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bFg-04-tGc">
-                            <connections>
-                                <action selector="addNewDataOnClick:" destination="BYZ-38-t0r" id="sc1-lp-BC0"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="bFg-04-tGc">
+                                <connections>
+                                    <action selector="addNewDataOnClick:" destination="BYZ-38-t0r" id="sc1-lp-BC0"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="photos" id="Jr6-9k-dRZ">
+                                <connections>
+                                    <action selector="goToPhotosPageOnClick:" destination="BYZ-38-t0r" id="494-fS-qBU"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="pIk-S5-64K" id="kpa-V3-BcD"/>
@@ -75,6 +82,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1442.0289855072465" y="65.625"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="EgU-FP-1xY">
+            <objects>
+                <viewController storyboardIdentifier="PhotoViewController" id="KRY-gE-IFD" customClass="PhotoViewController" customModule="CoreDataDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2q6-I1-kP2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="afG-E4-13f">
+                                <rect key="frame" x="87" y="135" width="240" height="154.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="157" id="77k-1z-Lcq"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUc-aw-Pnf">
+                                <rect key="frame" x="155" y="351" width="108" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="m8J-vH-W9y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="save Image"/>
+                                <connections>
+                                    <action selector="saveImageOnClick:" destination="KRY-gE-IFD" eventType="touchUpInside" id="bPx-jF-ANY"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Zg4-Rm-sB2">
+                                <rect key="frame" x="101" y="500.5" width="242" height="154.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="157" id="Jqo-pn-fm2"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQE-cr-UwQ">
+                                <rect key="frame" x="167" y="746.5" width="115" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Hsg-LW-hvE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="show Image"/>
+                                <connections>
+                                    <action selector="fetchImageOnClick:" destination="KRY-gE-IFD" eventType="touchUpInside" id="MSh-lI-36F"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qBt-n6-Pwi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qBt-n6-Pwi" firstAttribute="trailing" secondItem="afG-E4-13f" secondAttribute="trailing" constant="87" id="05q-Ba-OOD"/>
+                            <constraint firstItem="lQE-cr-UwQ" firstAttribute="top" secondItem="Zg4-Rm-sB2" secondAttribute="bottom" constant="90" id="8kc-Pe-yK5"/>
+                            <constraint firstItem="qBt-n6-Pwi" firstAttribute="trailing" secondItem="FUc-aw-Pnf" secondAttribute="trailing" constant="151" id="FdP-Vi-kmd"/>
+                            <constraint firstItem="afG-E4-13f" firstAttribute="top" secondItem="qBt-n6-Pwi" secondAttribute="top" constant="90" id="K6v-Eo-fhb"/>
+                            <constraint firstItem="afG-E4-13f" firstAttribute="leading" secondItem="qBt-n6-Pwi" secondAttribute="leading" constant="87" id="ShW-jT-yPG"/>
+                            <constraint firstItem="Zg4-Rm-sB2" firstAttribute="centerY" secondItem="2q6-I1-kP2" secondAttribute="centerY" constant="130" id="Skj-lR-LuP"/>
+                            <constraint firstItem="FUc-aw-Pnf" firstAttribute="top" secondItem="afG-E4-13f" secondAttribute="bottom" constant="60" id="V7z-cu-1Zg"/>
+                            <constraint firstItem="FUc-aw-Pnf" firstAttribute="leading" secondItem="qBt-n6-Pwi" secondAttribute="leading" constant="155" id="Zxm-nE-ZSd"/>
+                            <constraint firstItem="qBt-n6-Pwi" firstAttribute="trailing" secondItem="Zg4-Rm-sB2" secondAttribute="trailing" constant="71" id="pUW-ay-8aK"/>
+                            <constraint firstItem="lQE-cr-UwQ" firstAttribute="leading" secondItem="qBt-n6-Pwi" secondAttribute="leading" constant="167" id="u1K-dT-3p3"/>
+                            <constraint firstItem="Zg4-Rm-sB2" firstAttribute="leading" secondItem="qBt-n6-Pwi" secondAttribute="leading" constant="101" id="ub8-qo-wJ6"/>
+                            <constraint firstItem="qBt-n6-Pwi" firstAttribute="trailing" secondItem="lQE-cr-UwQ" secondAttribute="trailing" constant="132" id="vSk-fa-uXP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nwO-tB-Y2I">
+                        <barButtonItem key="rightBarButtonItem" title="select photo" id="ivO-ae-KVi">
+                            <connections>
+                                <action selector="openGallaryOnClick:" destination="KRY-gE-IFD" id="V31-p3-r9G"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="fetchImage" destination="Zg4-Rm-sB2" id="bcO-p1-iDO"/>
+                        <outlet property="saveImage" destination="afG-E4-13f" id="hjJ-Op-GpO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zLp-f4-ihb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2223" y="66"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tbh-ZQ-RX3">
@@ -96,6 +179,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="photo" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
